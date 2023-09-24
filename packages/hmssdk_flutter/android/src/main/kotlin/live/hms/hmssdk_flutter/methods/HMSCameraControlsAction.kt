@@ -174,7 +174,7 @@ class HMSCameraControlsAction {
                             } else {
                                 cameraControl.setFlash(true)
                             }
-                            result.success(HMSResultExtension.toDictionary(true, null))
+                            result.success(HMSResultExtension.toDictionary(true,!cameraControl.isFlashEnabled()))
                             return
                         } else {
                             result.success(HMSResultExtension.toDictionary(false, HMSExceptionExtension.getError("Flash is not supported for current facing camera, Also please ensure camera is turned ON")))
